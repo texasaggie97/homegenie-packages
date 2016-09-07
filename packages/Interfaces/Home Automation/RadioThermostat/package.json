@@ -1,0 +1,18 @@
+{
+    "author": "Mark Silva",
+    "version": "v0.1",
+    "title": "Insteon PLM interface driver",
+    "description": "Insteon PLM driver for SmartHome 2413S/2413U",
+    "published": "2016-09-15-16T00:00:00Z",
+    "sourcecode": "https://github.com/texasaggie97/mig-interface-radio-thermostat",
+    "homepage": "", 
+    "widgets": [ ],
+    "programs": [ ],
+    "interfaces": [ 
+        { 
+            "file": "RadioThermostat_0_1.zip",
+            "name":"WiFi Radio Thermostat interface driver",
+            "description": "Support for Radio Thermostats with WiFi USNAP module"
+        }
+    ]
+}

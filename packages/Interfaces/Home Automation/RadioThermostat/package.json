@@ -1,6 +1,6 @@
 {
     "author": "Mark Silva",
-    "version": "v0.1",
+    "version": "v1.0",
     "title": "WiFi Radio Thermostat interface driver",
     "description": "Support for Radio Thermostats with WiFi USNAP module",
     "published": "2016-09-15-16T00:00:00Z",
@@ -10,7 +10,7 @@
     "programs": [ ],
     "interfaces": [ 
         { 
-            "file": "RadioThermostat_0_1.zip",
+            "file": "RadioThermostat_1_0.zip",
             "name":"WiFi Radio Thermostat interface driver",
             "description": "Support for Radio Thermostats with WiFi USNAP module"
         }

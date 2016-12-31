@@ -4,7 +4,10 @@
 
 This interface provides the same REST interface that ZWave Thermostats 
 uses, as far as I can tell. This means you should be able
-to use any thermostat widget that works with ZQave, including the default.
+to use any thermostat widget that works with ZWave, including the default.
+
+Once installed, you will need to enable the RadioThermostat interface by
+going to Configure -> Settings -> RadioThermostat Options -> Enable
 
 The module address is assigned as the last part of the IP address, so a 
 thermostat at address 192.168.1.14 will be RadioThermostat 14.

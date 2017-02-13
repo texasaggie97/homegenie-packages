@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ProgramBlock xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ConditionType>OnTrue</ConditionType>
+  <Conditions />
+  <Commands />
+  <ScriptCondition>Program.AddOption("PollInterval", "15", "Poll Interval (minutes)", "text");
+Program.AddFeature("HomeAutomation.RadioThermostat", "Thermostat", "HomeGenie.RadioThermostatPoll", "Poll thermostat values", "checkbox");
+Program.Run();
+</ScriptCondition>
+  <ScriptSource>while (Program.IsEnabled)
+{
+  try {
+    // basic get will returns current device level 
+    Modules.WithFeature("HomeGenie.RadioThermostatPoll").Each((module) =&gt; {
+      //Program.Notify("Thermostat Poll", "Polling node " + module.Instance.Address + "&lt;br&gt;" + module.Instance.Name);
+      module.Command("Thermostat.StartQuery").Execute();
+      return false; // do not break, continue iterating...
+    });
+  }
+  catch (Exception e) {
+    // We don't really want to do anything here
+  }
+  // pause between each poll
+  var delay = Program.Option("PollInterval").DecimalValue * 60;
+  if (delay &lt; (5 * 60)) delay = (5 * 60);
+  Pause(delay);
+}
+</ScriptSource>
+  <ScriptErrors />
+  <Domain>HomeAutomation.HomeGenie.Automation</Domain>
+  <Address>39</Address>
+  <Name>Thermostat Poll</Name>
+  <Description>Periodically query radio thermostat values.</Description>
+  <Group>Z-Wave</Group>
+  <Features>
+    <ProgramFeature>
+      <FieldType>checkbox</FieldType>
+      <ForDomains>HomeAutomation.RadioThermostat</ForDomains>
+      <ForTypes>Thermostat</ForTypes>
+      <Property>HomeGenie.RadioThermostatPoll</Property>
+      <Description>Poll thermostat values</Description>
+    </ProgramFeature>
+  </Features>
+  <ActivationTime xsi:nil="true" />
+  <TriggerTime>2017-02-10T03:17:11.330216Z</TriggerTime>
+  <Type>CSharp</Type>
+  <IsEnabled>true</IsEnabled>
+</ProgramBlock>

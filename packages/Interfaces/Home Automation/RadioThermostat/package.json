@@ -1,18 +1,26 @@
 {
-    "author": "Mark Silva",
-    "version": "v1.0",
-    "title": "WiFi Radio Thermostat interface driver",
-    "description": "Support for Radio Thermostats with WiFi USNAP module",
-    "published": "2016-12-31-16T00:00:00Z",
-    "sourcecode": "https://github.com/texasaggie97/mig-interface-radio-thermostat",
-    "homepage": "", 
-    "widgets": [ ],
-    "programs": [ ],
-    "interfaces": [ 
-        { 
-            "file": "RadioThermostat_1_0.zip",
-            "name":"WiFi Radio Thermostat interface driver",
-            "description": "Support for Radio Thermostats with WiFi USNAP module"
-        }
-    ]
+   "author": "Mark Silva",
+   "version": "v1.0",
+   "title": "WiFi Radio Thermostat interface driver",
+   "description": "Support for Radio Thermostats with WiFi USNAP module",
+   "published": "2016-12-31-16T00:00:00Z",
+   "sourcecode": "https://github.com/texasaggie97/mig-interface-radio-thermostat",
+   "homepage": "", 
+   "widgets": [ ],
+   "programs": [
+      {
+         "file": "Thermostat_Poll.hgx",
+         "nane": "RadioThermostat Poll",
+         "description": "Query RadioThermostat for current state",
+         "uid": "10101",
+         "group": "Z-Wave"
+      }
+   ],
+   "interfaces": [ 
+      { 
+         "file": "RadioThermostat_1_0.zip",
+         "name":"WiFi Radio Thermostat interface driver",
+         "description": "Support for Radio Thermostats with WiFi USNAP module"
+      }
+   ]
 }

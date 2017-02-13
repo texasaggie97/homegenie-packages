@@ -24,13 +24,17 @@ They are:
 * homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.GetCacheValid
    * Certain operations require the state of the thermostat in HG be up to date
    * This will return the current timeout that is used before triggering an update in minutes (default 3 minutes)
-* homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.SetCacheValid/<value>
+* homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.SetCacheValid/#
    * Certain operations require the state of the thermostat in HG be up to date
    * This will set the current timeout that is used before triggering an update in minutes (default 3 minutes)
-* homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.SetPointSet/Agnostic/Temperature
+* homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.SetPointSet/Agnostic/#
    * The radio thermostat has different setpoints based on operating mode such as 'Heating' or 'Cooling'.
    * When using .../Thermostat.SetPointSet/Heating/ or .../Thermostat.SetPointSet/Cooling/, the operating mode must match.
    * 'Agnostic', on the otherhand, reads the current mode and uses that to set the setpoint
+   * Temperature is in Celcius
+* homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.SetPointSet/AgnosticF/#
+   * Temperature is in Fahrenheit
+   * Otherwise same as .../Agnostic/#
 * homegenieserver/api/HomeAutomation.RadioThermostat/ModuleAddress/Thermostat.GetModel
    * Returns the current thermostat model
 
